@@ -1,0 +1,16 @@
+Algoritmo "IMC"
+
+Var
+ Altura, peso, soma: real
+
+Inicio
+
+  escreva("Digite a altura: ")
+  leia(altura)
+  escreva("Digite o peso: ")
+  leia(peso)
+  
+  Soma <- peso /(altura * altura)
+  
+  escreva("Resultado da conta: ", Soma)
+Fimalgoritmo

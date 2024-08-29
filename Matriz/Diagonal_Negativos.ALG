@@ -1,51 +1,39 @@
-Algoritmo "Soma Matrizes"
+Algoritmo "Diagonal Negativos"
 
 
 
 Var
-   matrizA: vetor [0..4, 0..4] de inteiro
-   matrizB: vetor [0..4, 0..4] de inteiro
-   mat: vetor [0..4, 0..4] de inteiro
-   m, n, i, j, soma: inteiro
-   
-   
+
+mat: vetor [0..4, 0..4] de inteiro
+L, i, j: inteiro
+
 Inicio
 
+escreva("Qual a ordem da matriz? ")
+leia(L)
+escreval()
 
-    escreva("Qual a Quantidade de linhas da Matriz? ")
-    leia(m)
-    escreva("Qual a Quantidade de Colunas da Matriz? ")
-    leia(n)
-    escreval()
-    
-     escreval()
-     escreva("Digite os Valores da Matriz A: ")
-     leia(matrizA[i, j])
-     escreval()
-     
-    para i de 0 ate m-1 faca
-     para j de 0 ate n-1 faca
-       escreva("Elemento [", i, ",", j, "]: ")
-       leia(mat[i, j])
+para i de 1 ate L faca
+     para j de 1 ate L faca
+          escreva("Elemento[", i, ",",j, "]: ")
+          leia(mat[i,j])
      fimpara
-    fimpara
-    
-     escreval()
-     escreva("Digite os Valores da Matriz B: ")
-     leia(matrizB[i, j])
-     escreval()
+fimpara
 
-    para i de 0 ate m-1 faca
-     para j de 0 ate n-1 faca
-       escreva("Elemento [", i, ",", j, "]: ")
-       leia(mat[i, j])
+escreval()
+escreval("Diagonal Principal: ")
+para i de 1 ate L faca
+     escreva(mat[i,j])
+fimpara
+
+escreval()
+para i de 1 ate L faca
+     para j de 1 ate L faca
+          se i < j entao
+             i <- j
+             escreval("Quantidade de negativos = ", j)
+          fimse
      fimpara
-    fimpara
-    
-     soma <- matrizA[i, j] + matrizB[i, j]
-     
-     escreval()
-     escreva("Matriz Soma: ", soma)
-     escreval()
+fimpara
 
 Fimalgoritmo
